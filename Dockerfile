@@ -9,6 +9,6 @@ ENV MINIO_ACCESS_KEY=aaa \
 
 RUN wget https://dl.minio.io/server/minio/release/linux-amd64/minio
 
-RUN chmod +x minio
+RUN chmod 777 minio
 
 CMD ["./minio", "server", "/mnt/minio"]
