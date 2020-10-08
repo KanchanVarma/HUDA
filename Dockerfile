@@ -11,4 +11,6 @@ RUN wget https://dl.minio.io/server/minio/release/linux-amd64/minio
 
 RUN chmod 777 minio
 
+RUN chown -R 1000590000 /minio && sudo chmod u+rxw /minio
+
 CMD ["./minio", "server", "/mnt/minio"]
